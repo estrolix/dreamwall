@@ -1,7 +1,7 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,300,600,400&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,cyrillic);
 
 html,
 button,
@@ -38,52 +38,44 @@ html {
 }
 
 html { 
-    background: url('http://ununsplash.imgix.net/5/unsplash-bonus.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url('../img/bg.jpg') no-repeat center center fixed; 
     background-size: cover;
 }
 
 body {
-    min-width: 210px;
+    min-width: 270px;
 }
 
 html, body {
     height: 100%;
 }
 
-#logo {
-    width: 450px;
-    height: 120px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -225px;
-    text-align: center;
-    font-size: 80px;
-    font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 1px 1px 15px rgba(0,0,0,0.3);
-    transition: all 2.5s;
-    opacity: 1;
-}
-
+#logo,
 #desc {
     width: 450px;
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-left: -225px;
-    margin-top: 10px;
-    font-weight: 300;
     text-align: center;
-    font-size: 22px;
-    line-height: 34px;
+    font-weight: 300;
     text-shadow: 1px 1px 15px rgba(0,0,0,0.3);
     transition: all 2.5s;
     opacity: 1;
+}
+
+#logo {
+    height: 120px;
+    margin-top: -100px;
+    margin-left: -225px;
+    font-size: 80px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#desc {
+    margin-top: 10px;
+    margin-left: -225px;
+    font-size: 22px;
+    line-height: 34px;
 }
 
 body.before-animation #logo{
@@ -100,154 +92,16 @@ body.before-animation #desc{
    Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: 510px) {
-    content {
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        margin: 0;
-        border-radius: 0;
-        padding: 20px;
+@media only screen and (max-width: 530px) {
+
+    #logo {
+        font-size: 45px;
     }
 
-    .photo {
-        margin-top: 0;
-    }
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
+    #desc {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: -30px;
     }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }
